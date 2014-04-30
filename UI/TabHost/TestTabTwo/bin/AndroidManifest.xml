@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gypsai.testtabtwo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <!-- <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.gypsai.testtabtwo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application> -->
+    
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name">  
+       <!-- android:theme="@android:style/Theme.NoTitleBar" 的意思是将系统默认的tag标签去掉，为咱们自己的标签空出位置-->  
+        <activity android:name="com.gypsai.testtabtwo.MainActivity"  
+                  android:label="@string/app_name"  
+                  android:theme="@android:style/Theme.NoTitleBar"  
+                  >  
+            <intent-filter>  
+                <action android:name="android.intent.action.MAIN" />  
+                <category android:name="android.intent.category.LAUNCHER" />  
+            </intent-filter>  
+        </activity>  
+        <!-- 在主配置文件中声明用于标签切换的3个activity，记住此处一定要声明，否则会出错  
+            android:name="ArtistActivity"里面ArtistActivity前面是否有.都可以，你只需要保证该类是在manifest标签下package属性的包中即可。  
+         -->  
+        <activity android:name="ArtistActivity"  android:label="@string/app_name"></activity>   
+        <activity android:name="MusicActivity" android:label="@string/app_name"></activity>   
+        <activity android:name="SportActivity"  android:label="@string/app_name"></activity>  
+  
+    </application>  
+
+</manifest>
